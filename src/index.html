@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>MP em Mapas</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
     <meta name="theme-color" content="#cacaca">
     <!-- favicon -->
     <!-- <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -16,14 +16,69 @@
     <meta name="theme-color" content="#ffffff">
     <!-- build:css css/style.min.css -->
     <link rel="stylesheet" href="css/style.css">
-    <!--<link rel="stylesheet" href="css/jquery.fullpage.css">
-    <link rel="stylesheet" href="css/bootstrap-slider.min.css"> -->
+    <!--<link rel="stylesheet" href="css/jquery.fullpage.css"> -->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
     <!-- endbuild -->
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#navbar">
 
-    <h1>Hello World!</h1>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light" id="navbar">
+        <div class="container">
+            <a href="#" class="navbar-brand">Logo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTop" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTop">
+                <ul class="navbar-nav ml-auto justify-content-end">
+                    <li class="nav-item">
+                        <a href="#produtos" class="nav-link">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#sobre" class="nav-link">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#parceiros" class="nav-link">Parceiros</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div>
+        <div class="pagina produtos" id="produtos">
+            <div class="destaque">
+                <div class="container">
+                    (roda)
+                </div>
+            </div>
+            <div class="lista-produtos">
+                <div class="container">
+                    (lista de produtos)
+                </div>
+            </div>
+        </div>
+
+        <div class="pagina sobre" id="sobre">
+            <div class="container">
+                <h1>Sobre</h1>
+            </div>
+        </div>
+
+        <div class="pagina parceiros" id="parceiros">
+            <div class="container">
+                <h1>Parceiros</h1>
+            </div>
+        </div>
+
+        <footer>
+            Rodapé
+        </footer>
+    </div>
+
+    <script src="vendor/jquery/jquery.slim.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
 </body>
 

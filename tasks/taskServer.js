@@ -1,6 +1,6 @@
 // Inicia server
 module.exports = function (gulp, plugins, config) {
-    gulp.task('server', ['sass'],function(){
+    gulp.task('server', ['sass', 'copyVendor'],function(){
         plugins.browserSync.init({
             server: {
                 baseDir: config.srcPath
