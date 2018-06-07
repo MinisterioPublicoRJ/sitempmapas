@@ -49,70 +49,91 @@
         <div class="pagina produtos" id="produtos">
             <div class="destaque">
                 <div class="container">
-                    <div class="arrow arrow-up"></div>
-                    <div class="arrow arrow-down"></div>
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div id="selector">
+                                <div class="arrow arrow-up" id="arrow-up"></div>
+                                <div id="selector-previous">
+                                    <div class="produto-icone dpj"></div>
+                                </div>
+                                <div id="selector-current">
+                                    <div class="produto-icone cadg">
+                                        <span>CADG</span>
+                                    </div>
+                                </div>
+                                <div id="selector-next">
+                                    <div class="produto-icone inloco"></div>
+                                </div>
+                                <div class="arrow arrow-down" id="arrow-down"></div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h1 id="current-title">Inovação em Estatística, Geografia e em Data Science</h1>
+                            <p id="current-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="lista-produtos">
                 <div class="container">
                     <div class="row">
                         <div class="col">
-                            <a href="#" class="produto-icone cadg">
+                            <a href="#" class="produto-icone cadg" data-product-id="2">
                                 <span>CADG</span>
                             </a>
                         </div>
                         <div class="col">
-                            <a href="#" class="produto-icone inloco">
+                            <a href="#" class="produto-icone inloco" data-product-id="3">
                                 <span>InLoco</span>
                             </a>
                         </div>
                         <div class="col">
-                            <a href="#" class="produto-icone dpj">
+                            <a href="#" class="produto-icone dpj" data-product-id="1">
                                 <span>DPJ</span>
                             </a>
                         </div>
                         <div class="col">
-                            <a href="#" class="produto-icone mpedia">
+                            <a href="#" class="produto-icone mpedia" data-product-id="4">
                                 <span>MPédia</span>
                             </a>
                         </div>
                         <div class="col">
-                            <a href="#" class="produto-icone parquet-financeiro">
+                            <a href="#" class="produto-icone parquet-financeiro" data-product-id="5">
                                 <span>Parquet Financeiro</span>
                             </a>
                         </div>
                         <div class="col">
-                            <a href="#" class="produto-icone gqp">
+                            <a href="#" class="produto-icone gqp" data-product-id="6">
                                 <span>GQP</span>
                             </a>
                         </div>
                         <div class="col">
-                            <a href="#" class="produto-icone painel-gerencial">
+                            <a href="#" class="produto-icone painel-gerencial" data-product-id="7">
                                 <span>Painel Gerencial</span>
                             </a>
                         </div>
                         <div class="col">
-                            <a href="#" class="produto-icone lyra">
+                            <a href="#" class="produto-icone lyra" data-product-id="9">
                                 <span>Lyra</span>
                             </a>
                         </div>
                         <div class="col">
-                            <a href="#" class="produto-icone zuleika">
+                            <a href="#" class="produto-icone zuleika" data-product-id="8">
                                 <span>Zuleika</span>
                             </a>
                         </div>
                         <div class="col">
-                            <a href="#" class="produto-icone sinapse">
+                            <a href="#" class="produto-icone sinapse" data-product-id="0">
                                 <span>Sinapse</span>
                             </a>
                         </div>
                         <div class="col">
-                            <a href="#" class="produto-icone everardo">
+                            <a href="#" class="produto-icone everardo" data-product-id="10">
                                 <span>Everardo</span>
                             </a>
                         </div>
                         <div class="col">
-                            <a href="#" class="produto-icone api">
+                            <a href="#" class="produto-icone api" data-product-id="11">
                                 <span>API</span>
                             </a>
                         </div>
@@ -156,6 +177,7 @@
     <script src="vendor/jquery/jquery.slim.min.js"></script>
     <script src="vendor/popper/popper.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 
