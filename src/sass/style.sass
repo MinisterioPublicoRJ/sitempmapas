@@ -3,6 +3,12 @@ body
     padding: 0
     text-align: left
     position: relative
+    background-image: url("../assets/grafismo-front.png")
+    background-repeat: no-repeat
+    background-position: 50% 1300%
+    background-attachment: fixed
+    background-size: 100%
+
 
 .navbar
     background: white
@@ -10,8 +16,26 @@ body
 .pagina
     height: 100vh
     padding-top: 56px
+    background-repeat: no-repeat
+    background-size: 100%
+
+    &.produtos
+        background-image: url("../assets/grafismo-back-cima.png")
+        background-position: bottom center
+
+    &.sobre, &.parceiros
+        background-image: url("../assets/grafismo-back-baixo.png"), url("../assets/grafismo-back-cima.png")
+        background-position: top center, bottom center
 
 .produtos
     .destaque
         background-color: rgba(0,0,255,.7)
         height: 70vh
+    .lista-produtos
+        height: 30vh
+
+footer
+    background: cyan
+    color: white
+    min-height: 10vh
+    
