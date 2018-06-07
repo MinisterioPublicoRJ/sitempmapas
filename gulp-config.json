@@ -5,9 +5,6 @@
 
     "favIcoSrcPath":"src/favicon/*",
     "favIcoSrcDist":"dist/favicon",
-    "imgSrcPath":"src/img/*",
-    "imgSrcDist":"dist/img",
-    "fontSrcPath":"src/fonts/*",
 
     "imgSrcPath":"src/img/**/*",
     "imgSrcDist":"dist/img",
@@ -17,7 +14,7 @@
 
     "cssSrcPath":"src/css/*.css",
 
-    "sassSrc":"src/sass/**/*.scss",
+    "sassSrc":"src/sass/**/*.sass",
     "sassDist":"src/css/",
 
     "htmlSrcPath":"src/*.html",

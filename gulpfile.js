@@ -7,7 +7,7 @@ var gulp = require("gulp"),
 require(config.tasksPath + '/taskClean')(gulp, plugins, config);
 
 // Cria diretorio raiz e copia favicon
-require(config.tasksPath + '/taskBuildFavico')(gulp, plugins, config);
+require(config.tasksPath + '/taskBuildFavicon')(gulp, plugins, config);
 
 // Copia e otimiza imagens
 require(config.tasksPath + '/taskBuildImg')(gulp, plugins, config);
