@@ -1,2 +1,10 @@
-# Site Mp em mapas
-Url do site: [Site](https://ministeriopublicorj.github.io/sitempmapas/)
+# MP em Mapas
+
+## Installing
+
+    npm i gulp -g
+    npm i
+
+## Running
+
+    npm run server
