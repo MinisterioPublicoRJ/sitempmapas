@@ -87,6 +87,34 @@ body
     &.api
         background-image: url('../assets/icons/icon_api.svg')
 
+.icones-parceiros
+    margin-top: 10vh
+    .col
+        display: flex
+        align-items: center
+        justify-content: center
+    img
+        width: 80%
+        filter: grayscale(1)
+    a
+        display: block
+        position: relative
+        &:hover img
+            filter: grayscale(0)
+        &:hover:after
+            opacity: 0
+        &:after
+            content: ""
+            position: absolute
+            top: 0
+            left: 50%
+            margin-left: -40%
+            width: 80%
+            height: 100%
+            z-index: 2
+            background: #51aacc
+            mix-blend-mode: color
+
 footer
     background: cyan
     color: white
