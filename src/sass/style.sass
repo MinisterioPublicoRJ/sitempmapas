@@ -115,6 +115,10 @@ body
             background: #51aacc
             mix-blend-mode: color
 
+// Microsoft Edge doesn't support mix-blend-mode, so we hide it all
+_:-ms-fullscreen, :root .icones-parceiros a:after
+    display: none
+
 footer
     background: cyan
     color: white
