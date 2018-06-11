@@ -91,15 +91,25 @@ const $seletorNext = $('#selector-next')
 const $currentTitle = $('#current-title')
 const $currentDescription = $('#current-description')
 
-const selectProduct = productId => {
+const plusOne = productId => {
+    let nextId = productId + 1
+    if (nextId >= PRODUTOS.length) {
+        nextId = 0
+    }
+    return nextId
+}
+
+const minusOne = productId => {
     let prevId = productId - 1
     if (prevId < 0) {
         prevId = PRODUTOS.length - 1
     }
-    let nextId = productId + 1
-    if (nextId === PRODUTOS.length) {
-        nextId = 0
-    }
+    return prevId
+}
+
+const selectProduct = productId => {
+    let prevId = minusOne(productId)
+    let nextId = plusOne(productId)
 
     let currentProduct = PRODUTOS[productId]
     let previousProduct = PRODUTOS[prevId]
