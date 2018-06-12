@@ -11,7 +11,7 @@ body
     position: relative
     background-image: url("../assets/grafismo-front.png")
     background-repeat: no-repeat
-    background-position: 50% 1300%
+    background-position: bottom -70vh center
     background-attachment: fixed
     background-size: 100%
 
@@ -44,6 +44,8 @@ h1
     &.sobre, &.parceiros
         background-image: url("../assets/grafismo-back-baixo.png"), url("../assets/grafismo-back-cima.png")
         background-position: top center, bottom center
+        .texto-sobre
+            margin-bottom: 20px
 
     &.sobre
         h1
@@ -61,22 +63,71 @@ h1
 .produtos
     .destaque
         background-color: rgba(0,0,255,.7)
-        background-image: url("../assets/roda.svg")
+        background-image: url("../assets/roda-e-destaque.png")
+        background-position: center left
+        background-repeat: no-repeat
+        background-size: 50vh
+        // background-position: center left 25%, center left -5%
+        // background-size: 20%, 40%
         height: 60vh
+        position: relative
         .arrow
             background-image: url("../assets/arrow_slim.svg")
             background-repeat: no-repeat
             display: block
-            width: 3vw
-            // min-width: 50px
-            height: 3vh
-            // min-height: 30px
+            width: 30px
+            height: 20px
+            position: absolute
+            left: 33vh
+        .arrow-up
+            top: 12vh
         .arrow-down
+            top: 45vh
             transform: rotate(180deg)
+        .container-icone
+            width: 10vh
+            position: absolute
+            &.previous, &.next
+                left: 25vh
+                .produto-icone
+                    filter: grayscale(1) opacity(.4) contrast(5)
+                    width: 80%
+            &.previous
+                top: 3vh
+            &.next
+                top: 50vh
+            &.current
+                top: 23vh
+                left: 31vh
+                outline: 1px solid red
+                width: 15vh
+                height: 15vh
+                &:after
+                    content: ""
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+                    background: $cor_titulo
+                    mix-blend-mode: color
+                    filter: brightness(50%)
+            span
+                font-weight: bold
+                margin-top: -10px
+            .parquet-financeiro, .painel-gerencial
+                span
+                    font-size: 0.8em
+
+        h1, p
+            display: none
     .lista-produtos
         padding-top: 20px
         .col-md-2
             margin-bottom: 30px
+        .col-lg-1
+            padding-left: 0
+            padding-right: 0
 
 .produto-icone
     background-position: top center
@@ -157,3 +208,12 @@ footer
     background: $cor_rodape
     color: white
     min-height: 10vh
+
+@media (min-width: 1000px)
+    .produtos .destaque .container-icone
+        &.previous, &.next
+            width: 10vh
+        span
+            font-size: 1.3em
+        .parquet-financeiro span, .painel-gerencial span
+            font-size: 1.2em
