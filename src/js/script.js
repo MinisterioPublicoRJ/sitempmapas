@@ -15,9 +15,9 @@ const PRODUTOS = [
         url: '#',
     },
     {
-        name: 'CADG',
+        name: 'MP em Mapas',
         title: 'Inovação em Estatística, Geografia e em Data Science',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
+        description: 'O MP em Mapas é uma plataforma múltipla de diagnóstico, análise e georreferenciamento voltada para construção e visualização de conhecimento instrumental para a atividade-fim do Ministério Público do Estado do Rio de Janeiro.',
         class: 'cadg',
         url: '#sobre',
     },
