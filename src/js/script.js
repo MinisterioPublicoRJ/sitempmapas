@@ -94,6 +94,7 @@ let $seletorNext = $('#selector-next')
 let $seletorNextHidden = $('#selector-next-hidden')
 let $currentTitle = $('#current-title')
 let $currentDescription = $('#current-description')
+let $currentButton = $('#current-button')
 
 const plusOne = productId => {
     let nextId = productId + 1
@@ -158,6 +159,7 @@ const selectProduct = productId => {
         $seletorNextHidden = $('#selector-next-hidden')
         $currentTitle = $('#current-title')
         $currentDescription = $('#current-description')
+        $currentButton = $('#current-button')
 
         $seletorPreviousHidden.html(`<div class="produto-icone ${previousHiddenProduct.class}"></div>`)
         $seletorPrevious.html(`<div class="produto-icone ${previousProduct.class}"></div>`)
@@ -167,6 +169,7 @@ const selectProduct = productId => {
 
         $currentTitle.text(currentProduct.title)
         $currentDescription.text(currentProduct.description)
+        $currentButton.attr('href', currentProduct.url)
     }, TRANSITION_TIME)
 
     previousProductId = productId
