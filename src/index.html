@@ -25,17 +25,19 @@
 
     <nav class="navbar fixed-top navbar-expand-lg navbar-light" id="navbar">
         <div class="container">
-            <a href="#" class="navbar-brand">Logo</a>
+            <a href="#" class="navbar-brand">
+                <img src="assets/logo_mpEmMapas.png" alt="MP em Mapas">
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTop" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarTop">
                 <ul class="navbar-nav ml-auto justify-content-end">
                     <li class="nav-item">
-                        <a href="#produtos" class="nav-link">Produtos</a>
+                        <a href="#produtos" class="nav-link" onclick="selectProduct(2)">Produtos</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#sobre" class="nav-link">Sobre</a>
+                        <a href="#sobre" class="nav-link">Quem Somos</a>
                     </li>
                     <li class="nav-item">
                         <a href="#parceiros" class="nav-link">Parceiros</a>
@@ -50,6 +52,9 @@
             <div class="destaque">
                 <div id="selector">
                     <a href="#" class="arrow arrow-up" id="arrow-up"></a>
+                    <div id="selector-previous-hidden" class="container-icone previous-hidden">
+                        <div class="produto-icone sinapse"></div>
+                    </div>
                     <div id="selector-previous" class="container-icone previous">
                         <div class="produto-icone dpj"></div>
                     </div>
@@ -60,6 +65,9 @@
                     </div>
                     <div id="selector-next" class="container-icone next">
                         <div class="produto-icone inloco"></div>
+                    </div>
+                    <div id="selector-next-hidden" class="container-icone next-hidden">
+                        <div class="produto-icone mpedia"></div>
                     </div>
                     <a href="#" class="arrow arrow-down" id="arrow-down"></a>
                 </div>
@@ -248,7 +256,19 @@
         </div>
 
         <footer>
-            <div class="container">Rodapé</div>
+            <div class="container">
+                <div class="row">
+                    <div class="col align-self-start">
+                        menu
+                    </div>
+                    <div class="col align-self-start text-center">
+                        logo cadg mprj
+                    </div>
+                    <div class="col align-self-start text-right">
+                        &copy;2018 Ministério Público do Estado do Rio de Janeiro
+                    </div>
+                </div>
+            </div>
         </footer>
     </div>
 

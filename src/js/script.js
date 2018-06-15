@@ -1,3 +1,4 @@
+const TRANSITION_TIME = 500 //ms
 const PRODUTOS = [
     {
         name: 'Sinapse',
@@ -84,12 +85,15 @@ const PRODUTOS = [
         url: '#',
     },
 ]
+let previousProductId
 let currentProductId = 2
-const $seletorPrevious = $('#selector-previous')
-const $seletorCurrent = $('#selector-current')
-const $seletorNext = $('#selector-next')
-const $currentTitle = $('#current-title')
-const $currentDescription = $('#current-description')
+let $seletorPreviousHidden = $('#selector-previous-hidden')
+let $seletorPrevious = $('#selector-previous')
+let $seletorCurrent = $('#selector-current')
+let $seletorNext = $('#selector-next')
+let $seletorNextHidden = $('#selector-next-hidden')
+let $currentTitle = $('#current-title')
+let $currentDescription = $('#current-description')
 
 const plusOne = productId => {
     let nextId = productId + 1
@@ -110,16 +114,62 @@ const minusOne = productId => {
 const selectProduct = productId => {
     let prevId = minusOne(productId)
     let nextId = plusOne(productId)
+    let prevHiddenId = minusOne(prevId)
+    let nextHiddenId = plusOne(nextId)
 
-    let currentProduct = PRODUTOS[productId]
-    let previousProduct = PRODUTOS[prevId]
-    let nextProduct = PRODUTOS[nextId]
+    if (previousProductId === prevId) {
+        // previous-hidden disappears
+        $seletorPreviousHidden.remove()
+        // previous -> previous-hidden
+        $seletorPrevious.addClass('previous-hidden').removeClass('previous').attr('id', 'selector-previous-hidden')
+        // current -> previous
+        $seletorCurrent.addClass('previous').removeClass('current').attr('id', 'selector-previous')
+        // next -> current
+        $seletorNext.addClass('current').removeClass('next').attr('id', 'selector-current')
+        // next-hidden -> next
+        $seletorNextHidden.addClass('next').removeClass('next-hidden').attr('id', 'selector-next')
+            .after(`<div id="selector-next-hidden" class="container-icone next-hidden"></div>`)
+    }
+    if (previousProductId === nextId) {
+        // previous-hidden -> previous
+        $seletorPreviousHidden.addClass('previous').removeClass('previous-hidden').attr('id', 'selector-previous')
+            .before(`<div id="selector-previous-hidden" class="container-icone previous-hidden"></div>`)
+        // previous -> current
+        $seletorPrevious.addClass('current').removeClass('previous').attr('id', 'selector-current')
+        // current -> next
+        $seletorCurrent.addClass('next').removeClass('current').attr('id', 'selector-next')
+        // next -> next-hidden
+        $seletorNext.addClass('next-hidden').removeClass('next').attr('id', 'selector-next-hidden')
+        // next-hidden disappears
+        $seletorNextHidden.remove()
+    }
+    
+    window.setTimeout(() => {
+        let currentProduct = PRODUTOS[productId]
+        let previousHiddenProduct = PRODUTOS[prevHiddenId]
+        let previousProduct = PRODUTOS[prevId]
+        let nextProduct = PRODUTOS[nextId]
+        let nextHiddenProduct = PRODUTOS[nextHiddenId]
 
-    $seletorPrevious.html(`<div class="produto-icone ${previousProduct.class}"></div>`)
-    $seletorNext.html(`<div class="produto-icone ${nextProduct.class}"></div>`)
-    $seletorCurrent.html(`<div class="produto-icone ${currentProduct.class}"><span>${currentProduct.name}</span></div>`)
-    $currentTitle.text(currentProduct.title)
-    $currentDescription.text(currentProduct.description)
+        $seletorPreviousHidden = $('#selector-previous-hidden')
+        $seletorPrevious = $('#selector-previous')
+        $seletorCurrent = $('#selector-current')
+        $seletorNext = $('#selector-next')
+        $seletorNextHidden = $('#selector-next-hidden')
+        $currentTitle = $('#current-title')
+        $currentDescription = $('#current-description')
+
+        $seletorPreviousHidden.html(`<div class="produto-icone ${previousHiddenProduct.class}"></div>`)
+        $seletorPrevious.html(`<div class="produto-icone ${previousProduct.class}"></div>`)
+        $seletorNext.html(`<div class="produto-icone ${nextProduct.class}"></div>`)
+        $seletorNextHidden.html(`<div class="produto-icone ${nextHiddenProduct.class}"></div>`)
+        $seletorCurrent.html(`<div class="produto-icone ${currentProduct.class}"><span>${currentProduct.name}</span></div>`)
+
+        $currentTitle.text(currentProduct.title)
+        $currentDescription.text(currentProduct.description)
+    }, TRANSITION_TIME)
+
+    previousProductId = productId
 }
 
 $(document).ready(() => {
