@@ -72,8 +72,6 @@ h1
         background-position: center left
         background-repeat: no-repeat
         background-size: 50vh
-        // background-position: center left 25%, center left -5%
-        // background-size: 20%, 40%
         height: 60vh
         position: relative
         z-index: 1
@@ -85,11 +83,11 @@ h1
             height: 20px
             position: absolute
             left: 33vh
-        .arrow-up
-            top: 12vh
-        .arrow-down
-            top: 45vh
-            transform: rotate(180deg)
+            &.arrow-up
+                top: 12vh
+            &.arrow-down
+                top: 45vh
+                transform: rotate(180deg)
         .container-icone
             width: 10vh
             position: absolute
@@ -113,20 +111,29 @@ h1
             &.current
                 top: 23vh
                 left: 31vh
-                // outline: 1px solid red
                 width: 15vh
                 height: 15vh
                 span
                     color: $azul
-            span
-                font-weight: bold
-                margin-top: -10px
+                    font-weight: bold
+                    margin-top: -10px
             .parquet-financeiro, .painel-gerencial
                 span
                     font-size: 0.8em
+        .details
+            position: absolute
+            width: 60%
+            margin-left: 40%
+            padding-right: 5%
+            .current-button
+                border: 1px solid white
+                border-radius: 5px
+                color: white
+                font-size: .8em
+                padding: 5px 10px
+                text-decoration: none
 
-        // h1, p
-        //     display: none
+
     .lista-produtos
         padding-top: 20px
         z-index: 2

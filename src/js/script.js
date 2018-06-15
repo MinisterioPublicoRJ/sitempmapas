@@ -17,7 +17,7 @@ const PRODUTOS = [
     {
         name: 'CADG',
         title: 'Inovação em Estatística, Geografia e em Data Science',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
         class: 'cadg',
         url: '#sobre',
     },
