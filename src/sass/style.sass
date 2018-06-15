@@ -11,7 +11,7 @@ body
     position: relative
     background-image: url("../assets/grafismo-front.png")
     background-repeat: no-repeat
-    background-position: bottom -70vh center
+    background-position: bottom -80vh center
     background-attachment: fixed
     background-size: 100%
 
@@ -33,11 +33,10 @@ h1
     padding-top: 56px
     background-repeat: no-repeat
     background-size: 100%
-    // outline: 1px solid red
 
     &.produtos
         background-image: url("../assets/grafismo-back-cima.png")
-        background-position: bottom center
+        background-position: bottom  center
         color: white
         h1
             color: white
@@ -51,19 +50,35 @@ h1
         background-position: top center, bottom center
         .texto-sobre
             margin-bottom: 20px
+            line-height: 1.75em
+            text-align: justify
+            
 
     &.sobre
         h1
-            margin-bottom: 30px
+            margin-top: 8%
+            margin-bottom: 35px
+            
+        h2 
+            margin-bottom: 10%
+            color: $azul
+
+        .texto-descricao
+            text-align: justify
+            font-size: 10pt
+
+
         .icone
             color: $azul
             font-size: .9em
             font-weight: bold
             line-height: 1em
-            margin-bottom: 30px
+            margin-bottom: 10%
+            text-align: justify
             img
                 margin-bottom: 10px
-                width: 80%
+                width: 36px
+                height: 36px
 
 .produtos
     .destaque
@@ -120,19 +135,17 @@ h1
             .parquet-financeiro, .painel-gerencial
                 span
                     font-size: 0.8em
-        .details
+        .conteudo-destaque
             position: absolute
-            width: 60%
-            margin-left: 40%
+            width: 50%
+            margin-left: 35%
             padding-right: 5%
-            .current-button
-                border: 1px solid white
-                border-radius: 5px
-                color: white
+            h1
+                margin-bottom: 20px
+            p
+                margin-bottom: 20px
+            #current-button
                 font-size: .8em
-                padding: 5px 10px
-                text-decoration: none
-
 
     .lista-produtos
         padding-top: 20px
@@ -143,11 +156,13 @@ h1
         .col-lg-1
             padding-left: 0
             padding-right: 0
+        
+            
 
 .produto-icone
     background-position: top center
     background-repeat: no-repeat
-    background-size: 50px
+    background-size: 44px
     color: #666
     display: block
     font-size: .9em
@@ -160,6 +175,7 @@ h1
         height: 20px
         display: inline-block
         vertical-align: top
+        color: $azul
     
     &.cadg
         background-image: url('../assets/icons/icon_cadg.svg')
@@ -186,34 +202,38 @@ h1
     &.api
         background-image: url('../assets/icons/icon_api.svg')
 
-.icones-parceiros
-    margin-top: 10vh
-    .col-sm-3
-        display: flex
-        align-items: center
-        justify-content: center
-        margin-bottom: 30px
-    img
-        width: 80%
-        filter: grayscale(1)
-    a
-        display: block
-        position: relative
-        &:hover img
-            filter: grayscale(0)
-        &:hover:after
-            opacity: 0
-        &:after
-            content: ""
-            position: absolute
-            top: 0
-            left: 50%
-            margin-left: -40%
+
+#parceiros
+    h1    
+        margin-top: 15vh
+    .icones-parceiros
+        margin-top: 5vh
+        .col-sm-3
+            display: flex
+            align-items: center
+            justify-content: center
+            margin-bottom: 30px
+        img
             width: 80%
-            height: 100%
-            z-index: 2
-            background: $azul
-            mix-blend-mode: color
+            filter: grayscale(1)
+        a
+            display: block
+            position: relative
+            &:hover img
+                filter: grayscale(0)
+            &:hover:after
+                opacity: 0
+            &:after
+                content: ""
+                position: absolute
+                top: 0
+                left: 50%
+                margin-left: -40%
+                width: 80%
+                height: 100%
+                z-index: 2
+                background: $azul
+                mix-blend-mode: color
 
 // Microsoft Internet Explorer 11 and Edge doesn't support mix-blend-mode, so we hide it all
 _:-ms-fullscreen, :root .icones-parceiros a:after
