@@ -8,7 +8,7 @@ const PRODUTOS = [
         url: '#',
     },
     {
-        name: 'Diagnósticos Promotorias de Justiça',
+        name: 'Diagnósticos das Promotorias',
         title: 'Lorem ipsum DPJ',
         description: 'Description DPJ',
         class: 'dpj',
