@@ -2,8 +2,8 @@ const TRANSITION_TIME = 500 //ms
 const PRODUTOS = [
     {
         name: 'MP em Mapas',
-        title: 'Inovação em Estatística, Geografia e em Data Science',
-        description: 'O MP em Mapas é uma plataforma múltipla de diagnóstico, análise e georreferenciamento voltada para construção e visualização de conhecimento instrumental para a atividade-fim do Ministério Público do Estado do Rio de Janeiro. Lorem ipsum dolor sit amet, consectetur adipiscing elit. O MP em Mapas é uma plataforma múltipla de diagnóstico, análise e georreferenciamento voltada para construção e visualização de conhecimento instrumental para a atividade-fim do Ministério Público do Estado do Rio de Janeiro. Lorem ipsum dolor sit amet, consectetur adipiscing elit, consectetur.',
+        title: 'Inovação em Estatística, Geografia e Data Science',
+        description: 'O MP em Mapas é uma família de plataformas de análise, diagnóstico e georreferenciamento focadas na construção e visualização de conhecimento instrumental para a atividade-fim do Ministério Público do Estado do Rio de Janeiro.',
         class: 'cadg',
         url: '#sobre',
     },
