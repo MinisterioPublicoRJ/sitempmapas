@@ -172,6 +172,10 @@ const selectProduct = productId => {
         $currentButton.attr('href', currentProduct.url)
     }, TRANSITION_TIME)
 
+    // highlight selected icon
+    $('.lista-produtos .produto-icone').removeClass('selected')
+    $(`.lista-produtos .produto-icone[data-product-id=${productId}]`).addClass('selected')
+
     previousProductId = productId
 }
 
