@@ -1,20 +1,6 @@
 const TRANSITION_TIME = 500 //ms
 const PRODUTOS = [
     {
-        name: 'Sinapse',
-        title: 'Lorem ipsum Sinapse',
-        description: 'Another description Sinapse',
-        class: 'sinapse',
-        url: '#',
-    },
-    {
-        name: 'Diagnósticos das Promotorias',
-        title: 'Lorem ipsum DPJ',
-        description: 'Description DPJ',
-        class: 'dpj',
-        url: '#',
-    },
-    {
         name: 'MP em Mapas',
         title: 'Inovação em Estatística, Geografia e Data Science',
         description: 'O MP em Mapas é uma família de plataformas de análise, diagnóstico e georreferenciamento focadas na construção e visualização de conhecimento instrumental para a atividade-fim do Ministério Público do Estado do Rio de Janeiro.',
@@ -26,6 +12,13 @@ const PRODUTOS = [
         title: 'Lorem ipsum InLoco',
         description: 'Another description InLoco',
         class: 'inloco',
+        url: '#',
+    },
+    {
+        name: 'Diagnósticos das Promotorias',
+        title: 'Lorem ipsum DPJ',
+        description: 'Description DPJ',
+        class: 'dpj',
         url: '#',
     },
     {
@@ -57,6 +50,13 @@ const PRODUTOS = [
         url: '#',
     },
     {
+        name: 'Lyra',
+        title: 'Lorem ipsum Lyra',
+        description: 'Another description Lyra',
+        class: 'lyra',
+        url: '#',
+    },
+    {
         name: 'Zuleika',
         title: 'Lorem ipsum Zuleika',
         description: 'Another description Zuleika',
@@ -64,10 +64,10 @@ const PRODUTOS = [
         url: '#',
     },
     {
-        name: 'Lyra',
-        title: 'Lorem ipsum Lyra',
-        description: 'Another description Lyra',
-        class: 'lyra',
+        name: 'Sinapse',
+        title: 'Lorem ipsum Sinapse',
+        description: 'Another description Sinapse',
+        class: 'sinapse',
         url: '#',
     },
     {
@@ -86,15 +86,20 @@ const PRODUTOS = [
     },
 ]
 let previousProductId
-let currentProductId = 2
+let currentProductId = 0
+
+let $arrowDown = $('#arrow-down')
+let $arrowUp = $('#arrow-up')
+
+let $currentTitle = $('#current-title')
+let $currentDescription = $('#current-description')
+let $currentButton = $('#current-button')
+
 let $seletorPreviousHidden = $('#selector-previous-hidden')
 let $seletorPrevious = $('#selector-previous')
 let $seletorCurrent = $('#selector-current')
 let $seletorNext = $('#selector-next')
 let $seletorNextHidden = $('#selector-next-hidden')
-let $currentTitle = $('#current-title')
-let $currentDescription = $('#current-description')
-let $currentButton = $('#current-button')
 
 const plusOne = productId => {
     let nextId = productId + 1
@@ -144,6 +149,14 @@ const selectProduct = productId => {
         // next-hidden disappears
         $seletorNextHidden.remove()
     }
+
+    // disable events on previous/next icons
+    $seletorPrevious.off('click')
+    $seletorNext.off('click')
+
+    // disable arrow events
+    $arrowDown.off('click')
+    $arrowUp.off('click')
     
     window.setTimeout(() => {
         let currentProduct = PRODUTOS[productId]
@@ -170,27 +183,43 @@ const selectProduct = productId => {
         $currentTitle.text(currentProduct.title)
         $currentDescription.text(currentProduct.description)
         $currentButton.attr('href', currentProduct.url)
+
+        // re-enable events on previous/next icons
+        $seletorPrevious.on('click', scrollUp)
+        $seletorNext.on('click', scrollDown)
+
+        // re-enable arrows
+        $arrowUp.off('click').on('click', scrollUp)
+        $arrowDown.off('click').on('click', scrollDown)
     }, TRANSITION_TIME)
+
+    // highlight selected icon
+    $('.lista-produtos .produto-icone').removeClass('selected')
+    $(`.lista-produtos .produto-icone[data-product-id=${productId}]`).addClass('selected')
 
     previousProductId = productId
 }
 
-$(document).ready(() => {
+const scrollUp = () => {
+    currentProductId = minusOne(currentProductId)
     selectProduct(currentProductId)
-    $('#arrow-up').on('click', () => {
-        currentProductId--
-        if (currentProductId <= 0) {
-            currentProductId = PRODUTOS.length - 1
-        }
-        selectProduct(currentProductId)
-    })
-    $('#arrow-down').on('click', () => {
-        currentProductId++
-        if (currentProductId >= PRODUTOS.length) {
-            currentProductId = 0
-        }
-        selectProduct(currentProductId)
-    })
+}
+
+const scrollDown = () => {
+    currentProductId = plusOne(currentProductId)
+    selectProduct(currentProductId)
+}
+
+// when page is loaded
+$(document).ready(() => {
+    // refresh current product
+    selectProduct(currentProductId)
+
+    // enable arrows
+    $arrowUp.off('click').on('click', scrollUp)
+    $arrowDown.off('click').on('click', scrollDown)
+
+    // enable icons row click
     $('.lista-produtos .produto-icone').on('click', function(){
         selectProduct($(this).data('product-id'))
     })
