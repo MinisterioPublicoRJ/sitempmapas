@@ -33,11 +33,11 @@ h1
     padding-top: 56px
     background-repeat: no-repeat
     background-size: 100%
-    outline: 1px solid red
+    // outline: 1px solid red
 
     &.produtos
-        background-image: url("../assets/grafismo-back-cima.png")
-        background-position: bottom  center
+        background-image: url("../assets/grafismo-fundo-baixo.svg")
+        background-position: bottom center
         color: white
         h1
             color: white
@@ -47,7 +47,7 @@ h1
             text-transform: uppercase
 
     &.sobre, &.parceiros
-        background-image: url("../assets/grafismo-back-baixo.png"), url("../assets/grafismo-back-cima.png")
+        background-image: url("../assets/grafismo-fundo-em-cima.svg"), url("../assets/grafismo-fundo-baixo.svg")
         background-position: top center, bottom center
         .texto-sobre
             margin-bottom: 20px
@@ -57,8 +57,8 @@ h1
 
     &.sobre
         h1
-            margin-top: 8%
-            margin-bottom: 35px
+            margin-top: 5%
+            margin-bottom: 5vh
             
         h2 
             margin-bottom: 10%
@@ -159,7 +159,7 @@ h1
         z-index: 2
         position: relative
         .col-md-2
-            margin-bottom: 30px
+            margin-bottom: 20px
         .col-lg-1
             padding-left: 0
             padding-right: 0
@@ -215,9 +215,11 @@ h1
 
 #parceiros
     h1    
-        margin-top: 15vh
+        margin-top: 5%
+        margin-bottom: 5vh
     .icones-parceiros
         margin-top: 5vh
+        min-height: 55vh
         .col-sm-3
             display: flex
             align-items: center
@@ -250,10 +252,19 @@ _:-ms-fullscreen, :root .icones-parceiros a:after
     display: none
 
 footer
+    display: block
     background: $cor_rodape
     color: white
-    font-size: .8em
-    min-height: 10vh
+    font-size: 12pt
+    min-height: 30vh
+    padding-top: 20px
+    height: 100%
+    a
+        color: white
+    img
+        float: right
+        width: 258px
+        height: 60px
 
 @media (min-width: 1000px)
     .produtos .destaque .container-icone
