@@ -191,6 +191,18 @@ const selectProduct = productId => {
         // re-enable arrows
         $arrowUp.off('click').on('click', scrollUp)
         $arrowDown.off('click').on('click', scrollDown)
+
+        $('#touch-selector').off('touchend').on('touchend', e => {
+            let metadeDaTela = window.innerWidth / 2
+            let posicaoDragX = e.changedTouches[0].clientX
+            if (posicaoDragX > metadeDaTela) {
+                scrollUp()
+            }
+            if (posicaoDragX < metadeDaTela) {
+                scrollDown()
+            }
+            e.preventDefault()
+        })
     }, TRANSITION_TIME)
 
     // highlight selected icon
