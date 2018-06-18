@@ -8,7 +8,7 @@ const PRODUTOS = [
         url: '#',
     },
     {
-        name: 'DPJ',
+        name: 'Diagnósticos Promotorias de Justiça',
         title: 'Lorem ipsum DPJ',
         description: 'Description DPJ',
         class: 'dpj',
@@ -17,7 +17,7 @@ const PRODUTOS = [
     {
         name: 'MP em Mapas',
         title: 'Inovação em Estatística, Geografia e em Data Science',
-        description: 'O MP em Mapas é uma plataforma múltipla de diagnóstico, análise e georreferenciamento voltada para construção e visualização de conhecimento instrumental para a atividade-fim do Ministério Público do Estado do Rio de Janeiro.',
+        description: 'O MP em Mapas é uma plataforma múltipla de diagnóstico, análise e georreferenciamento voltada para construção e visualização de conhecimento instrumental para a atividade-fim do Ministério Público do Estado do Rio de Janeiro. Lorem ipsum dolor sit amet, consectetur adipiscing elit. O MP em Mapas é uma plataforma múltipla de diagnóstico, análise e georreferenciamento voltada para construção e visualização de conhecimento instrumental para a atividade-fim do Ministério Público do Estado do Rio de Janeiro. Lorem ipsum dolor sit amet, consectetur adipiscing elit, consectetur.',
         class: 'cadg',
         url: '#sobre',
     },
@@ -29,7 +29,7 @@ const PRODUTOS = [
         url: '#',
     },
     {
-        name: 'MPédia',
+        name: 'Parquet Data',
         title: 'Lorem ipsum MPédia',
         description: 'Another description MPédia',
         class: 'mpedia',
