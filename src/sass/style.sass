@@ -35,18 +35,10 @@ h1
     padding-top: 56px
     background-repeat: no-repeat
     background-size: 100%
-    // outline: 1px solid red
 
     &.produtos
         background-image: url("../assets/grafismo-fundo-baixo.svg")
         background-position: bottom center
-        color: white
-        h1
-            color: white
-            font-size: 1.8em
-            font-weight: bold
-            line-height: 1.4em
-            text-transform: uppercase
 
     &.sobre, &.parceiros
         background-image: url("../assets/grafismo-fundo-em-cima.svg"), url("../assets/grafismo-fundo-baixo.svg")
@@ -55,13 +47,12 @@ h1
             margin-bottom: 20px
             line-height: 1.75em
             text-align: justify
-            
 
     &.sobre
         h1
             margin-top: 5%
             margin-bottom: 5vh
-            
+
         h2 
             margin-bottom: 10%
             color: $azul
@@ -69,7 +60,6 @@ h1
         .texto-descricao
             text-align: justify
             font-size: 10pt
-
 
         .icone
             color: $azul
@@ -84,77 +74,138 @@ h1
                 height: 36px
 
 .produtos
+    color: white
+    h1
+        color: white
+        font-weight: bold
+        line-height: 1.4em
+        text-transform: uppercase
+        font-size: 1.2em
+        padding: 0 10%
+        @media (min-width: 1000px)
+            font-size: 1.8em
+            padding: 0
+
     .destaque
         background-color: rgba(0,0,255,.7)
-        background-image: url("../assets/roda-e-destaque.png")
-        background-position: center left
+        background-image: url("../assets/roda_mobile_e_destaque.svg")
         background-repeat: no-repeat
-        background-size: 50vh
-        height: 60vh
+        height: 40vh
         position: relative
-        z-index: 1
+
         .arrow
             background-image: url("../assets/arrow_slim.svg")
             background-repeat: no-repeat
             display: block
+            position: absolute
+            top: 20%
             width: 30px
             height: 20px
-            position: absolute
-            left: 33vh
             &.arrow-up
-                top: 12vh
+                left: 28%
+                transform: rotate(-90deg)
             &.arrow-down
-                top: 45vh
-                transform: rotate(180deg)
+                right: 28%
+                transform: rotate(90deg)
+
         .container-icone
-            width: 10vh
+            width: 10%
             position: absolute
             transition: all .5s
             .produto-icone
+                background-size: contain
                 transition: all .5s
                 filter: grayscale(0) opacity(1) contrast(1)
                 width: 100%
-            &.previous-hidden, &.next-hidden
-                left: 15vh
-                opacity: 0
-            &.previous-hidden
-                top: -10vh
-            &.next-hidden
-                top: 57vh
-            &.previous, &.next
-                left: 25vh
+            &.previous-hidden, &.previous, &.next, &.next-hidden
                 .produto-icone
                     filter: grayscale(1) opacity(.4) contrast(5)
-                    width: 80%
+                    width: 70%
+            &.previous-hidden, &.next-hidden
+                top: -2%
+            &.previous, &.next
+                top: 10%
+            &.previous-hidden
+                left: 7%
             &.previous
-                top: 3vh
-            &.next
-                top: 50vh
+                left: 17%
             &.current
-                top: 23vh
-                left: 31vh
-                width: 15vh
-                height: 15vh
-                span
-                    color: $azul
-                    font-weight: bold
-                    margin-top: -10px
-                    font-size: .9em
-                    line-height: 1.25em
-            .parquet-financeiro, .painel-gerencial
-                span
-                    font-size: 0.8em
+                top: 15%
+                left: 45%
+            &.next
+                left: 75%
+            &.next-hidden
+                left: 85%
+            span
+                display: none
+
         .conteudo-destaque
-            position: absolute
-            width: 50%
-            margin-left: 35%
-            padding-right: 5%
-            h1
-                margin-bottom: 20px
-            p
-                margin-bottom: 20px
-            #current-button
-                font-size: .8em
+            padding-top: 35%
+            text-align: center
+
+        @media (min-width: 1000px)
+            background-image: url("../assets/roda-e-destaque.png")
+            background-position: center left
+            background-size: 50vh
+            height: 60vh
+            z-index: 1
+
+            .arrow
+                left: 33vh
+                &.arrow-up
+                    left: 33vh
+                    top: 12vh
+                    transform: rotate(0)
+                &.arrow-down
+                    top: 45vh
+                    transform: rotate(180deg)
+            .container-icone
+                &.previous-hidden, &.next-hidden
+                    left: 15vh
+                    opacity: 0
+                &.previous-hidden
+                    top: -10vh
+                &.next-hidden
+                    top: 57vh
+                &.previous, &.next
+                    left: 25vh
+                &.previous
+                    top: 3vh
+                &.next
+                    top: 50vh
+                &.current
+                    top: 23vh
+                    left: 31vh
+                    width: 15vh
+                    height: 15vh
+                    span
+                        color: $azul
+                        display: block
+                        font-size: .9em
+                        font-weight: bold
+                        line-height: 1.25em
+                        padding-top: 20px
+                        text-align: center
+                .parquet-financeiro, .painel-gerencial
+                    span
+                        font-size: 0.8em
+            .conteudo-destaque
+                display: flex
+                height: 100%
+                margin-left: 35%
+                padding-right: 5%
+                padding-top: initial
+                position: absolute
+                text-align: left
+                width: 50%
+                h1
+                    // font-size: initial
+                    margin-bottom: 20px
+                p
+                    font-size: initial
+                    margin-bottom: 20px
+                #current-button
+                    font-size: .8em
 
     .lista-produtos
         padding-top: 20px
