@@ -2,7 +2,7 @@ const TRANSITION_TIME = 500 //ms
 const PRODUTOS = [
     {
         name: 'MP em Mapas',
-        title: 'Inovação em Estatística, Geografia e Data Science',
+        title: 'Inovação em Estatística,<br> Geografia e Data Science',
         description: 'O MP em Mapas é uma família de plataformas de análise, diagnóstico e georreferenciamento focadas na construção e visualização de conhecimento instrumental para a atividade-fim do Ministério Público do Estado do Rio de Janeiro.',
         class: 'cadg',
         url: '#sobre',
@@ -180,8 +180,8 @@ const selectProduct = productId => {
         $seletorNextHidden.html(`<div class="produto-icone ${nextHiddenProduct.class}"></div>`)
         $seletorCurrent.html(`<div class="produto-icone ${currentProduct.class}"><span>${currentProduct.name}</span></div>`)
 
-        $currentTitle.text(currentProduct.title)
-        $currentDescription.text(currentProduct.description)
+        $currentTitle.html(currentProduct.title)
+        $currentDescription.html(currentProduct.description)
         $currentButton.attr('href', currentProduct.url)
 
         // re-enable events on previous/next icons
