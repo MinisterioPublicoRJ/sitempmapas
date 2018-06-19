@@ -169,7 +169,26 @@ const selectProduct = productId => {
 
         $currentTitle.html(currentProduct.title)
         $currentDescription.html(currentProduct.description)
-        $currentButton.attr('href', currentProduct.url)
+
+        // button
+        if (!currentProduct.url) {
+            $currentButton.hide()
+        } else {
+            let buttonText = 'Acessar'
+            if (currentProduct.restricted) {
+                buttonText += ' 🔒'
+                $currentButton.removeClass('btn-outline-light').addClass('btn-outline-warning')
+            } else {
+                $currentButton.removeClass('btn-outline-warning').addClass('btn-outline-light')
+            }
+            if (currentProduct.url[0] === '#') {
+                buttonText = 'Saiba Mais +'
+            }
+            $currentButton
+                .show()
+                .text(buttonText)
+                .attr('href', currentProduct.url)
+        }
 
         // re-enable events on previous/next icons
         $seletorPrevious.on('click', scrollUp)
