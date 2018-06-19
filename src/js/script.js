@@ -14,6 +14,7 @@ const PRODUTOS = [
         class: 'inloco',
         url: 'http://inloco.mprj.mp.br/',
         restricted: false,
+        video: 'inloco.mp4',
     },
     {
         name: 'Parquet Data',
@@ -38,6 +39,7 @@ const PRODUTOS = [
         class: 'painel-gerencial',
         url: 'http://apps.mprj.mp.br/sistema/mpmapas/index.html',
         restricted: false,
+        video: 'painel-adm.mp4',
     },
     {
         name: 'Lyra',
@@ -87,6 +89,8 @@ let $seletorPrevious = $('#selector-previous')
 let $seletorCurrent = $('#selector-current')
 let $seletorNext = $('#selector-next')
 let $seletorNextHidden = $('#selector-next-hidden')
+
+let $video = $('video')
 
 const plusOne = productId => {
     let nextId = productId + 1
@@ -170,6 +174,12 @@ const selectProduct = productId => {
         $currentTitle.html(currentProduct.title)
         $currentDescription.html(currentProduct.description)
 
+        if (currentProduct.video) {
+            setVideo(currentProduct.video)
+        } else {
+            setVideo('video-produto-generico.mp4')
+        }
+
         // button
         if (!currentProduct.url) {
             $currentButton.hide()
@@ -228,6 +238,16 @@ const scrollDown = () => {
     selectProduct(currentProductId)
 }
 
+const setVideo = video => {
+    if (window.matchMedia("(min-width: 1000px)").matches) {
+        let newVideoSrc = `./videos/${video}`
+        let videoSrc = $video.attr('src')
+        if (videoSrc !== newVideoSrc) {
+            $video.attr('src', newVideoSrc)
+        }
+    }
+}
+
 // when page is loaded
 $(document).ready(() => {
     // refresh current product
@@ -241,4 +261,7 @@ $(document).ready(() => {
     $('.lista-produtos .produto-icone').on('click', function(){
         selectProduct($(this).data('product-id'))
     })
+
+    // video
+    setVideo('inloco.mp4')
 })
