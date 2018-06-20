@@ -33,9 +33,9 @@ const PRODUTOS = [
         restricted: true,
     },
     {
-        name: 'Paineis Gerenciais',
-        title: 'Paineis Gerenciais',
-        description: 'Os paineis gerenciais do "MP em Mapas 2.0" apresentam diversos dados agrupados sobre regiões do estado do Rio de Janeiro. Em sua visão Social são encontradas informações sobre políticos eleitos, atividades econômicas, cultura local e informações de execução orçamentárias. Já nos paineis "Institucional" e "Administrativo", de acesso excluisivo para os membros do MPRJ, são apresentadas informações sobre os do MPRJ, com detalhamentos da distribuição de sua força de trabalho e de seus gastos.',
+        name: 'Painéis Gerenciais',
+        title: 'Painéis Gerenciais',
+        description: 'Os painéis gerenciais do "MP em Mapas 2.0" apresentam diversos dados agrupados sobre regiões do estado do Rio de Janeiro. Em sua visão Social são encontradas informações sobre políticos eleitos, atividades econômicas, cultura local e informações de execução orçamentárias. Já nos painéis "Institucional" e "Administrativo", de acesso excluisivo para os membros do MPRJ, são apresentadas informações sobre os do MPRJ, com detalhamentos da distribuição de sua força de trabalho e de seus gastos.',
         class: 'painel-gerencial',
         url: 'http://apps.mprj.mp.br/sistema/mpmapas/index.html',
         restricted: false,
