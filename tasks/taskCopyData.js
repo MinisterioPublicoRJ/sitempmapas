@@ -2,11 +2,8 @@
 module.exports = function (gulp, plugins, config) {
     gulp.task("copyData", function(){
         return gulp
-            .src('src/data/**/*')
-            .pipe(plugins.imagemin([
-                plugins.imagemin.optipng({ optimizationLevel: 5 })
-            ]))
-            .pipe(gulp.dest('dist/data/'));
+            .src('src/assets/**/*')
+            .pipe(gulp.dest('dist/assets/'));
     });
     gulp.task("copyBootstrap", () => gulp
         .src('node_modules/bootstrap/dist/**/*')

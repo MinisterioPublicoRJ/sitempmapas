@@ -240,7 +240,7 @@ const scrollDown = () => {
 
 const setVideo = video => {
     if (window.matchMedia("(min-width: 1000px)").matches) {
-        let newVideoSrc = `./videos/${video}`
+        let newVideoSrc = `./assets/videos/${video}`
         let videoSrc = $video.attr('src')
         if (videoSrc !== newVideoSrc) {
             $video.attr('src', newVideoSrc)

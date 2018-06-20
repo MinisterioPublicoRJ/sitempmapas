@@ -46,13 +46,20 @@ h1
                 -ms-flex: 0 0 11.11111%
                 flex: 0 0 11.11111%
                 max-width: 11.11111%
+        .video-container
+            display: none
+            @media (min-width: 1000px)
+                display: block
+                max-height: 60vh
+                overflow: hidden
+                position: absolute
+                width: 100%
+                z-index: 1
         .video
             display: none
             @media (min-width: 1000px)
                 display: block
-                position: absolute
                 width: 100%
-                z-index: 1
 
     &.sobre, &.parceiros
         @media (min-width: 1000px)
