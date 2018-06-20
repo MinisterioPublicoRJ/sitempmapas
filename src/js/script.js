@@ -6,6 +6,7 @@ const PRODUTOS = [
         description: 'O MP em Mapas é uma família de plataformas de análise, diagnóstico e georreferenciamento focadas na construção e visualização de conhecimento instrumental para a atividade-fim do Ministério Público do Estado do Rio de Janeiro.',
         class: 'cadg',
         url: '#sobre',
+        video: 'institucional-setor.mp4',
     },
     {
         name: 'In Loco',
@@ -31,6 +32,7 @@ const PRODUTOS = [
         class: 'gqp',
         url: 'http://apps.mprj.mp.br/sistema/gqp/',
         restricted: true,
+        video: 'gqp.mp4',
     },
     {
         name: 'Painéis Gerenciais',
@@ -39,18 +41,19 @@ const PRODUTOS = [
         class: 'painel-gerencial',
         url: 'http://apps.mprj.mp.br/sistema/mpmapas/index.html',
         restricted: false,
-        video: 'painel-adm.mp4',
+        video: 'painel.mp4',
     },
     {
         name: 'Lyra',
         title: 'Lyra',
         description: 'Família de projetos de inteligência artificial do MPRJ, batizada em homenagem a Roberto Lyra, considerado o "Príncipe dos Promotores de Justiça do Brasil". O projeto Lyra está treinando um robô para ler e interpretar documentos judiciais, tornando possíveis análises estatísticas e predileções sobre andamento de processos.',
         class: 'lyra',
+        video: 'lyra.mp4',
     },
     {
         name: 'Zuleika',
         title: 'Zuleika',
-        description: 'Nomeada em homenagem à primeira promotora do Brasil, Zuleika Sucupira Kenworthy, está ferramenta garante que o MPRJ tenha acesso a todos os andamentos de seus processos no TJ, trabalhando diariamente na importação de dados de um órgão para o outro.',
+        description: 'Nomeada em homenagem à primeira promotora do Brasil, Zuleika Sucupira Kenworthy, esta ferramenta garante que o MPRJ tenha acesso a todos os andamentos de seus processos no TJ, trabalhando diariamente na importação de dados de um órgão para o outro.',
         class: 'zuleika',
     },
     {
@@ -263,5 +266,5 @@ $(document).ready(() => {
     })
 
     // video
-    setVideo('inloco.mp4')
+    setVideo('institucional-setor.mp4')
 })
