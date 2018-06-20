@@ -4,6 +4,10 @@ $cor_subtitulo: $azul
 $cor_texto: #676769
 $cor_rodape: $azul
 
+$desktop: "min-width: 1000px"
+$mobile: "max-width: 999px"
+$landscape: "orientation: landscape"
+
 html
     scroll-behavior: smooth
 
@@ -12,7 +16,7 @@ body
     padding: 0
     position: relative
     text-align: left
-    @media (min-width: 1000px)
+    @media ($desktop)
         background-attachment: fixed
         // background-image: url("../assets/grafismo-frente-baixo.svg")
         background-position: bottom -20vh center
@@ -39,7 +43,7 @@ h1
 
     &.produtos
         position: relative
-        @media (min-width: 1000px)
+        @media ($desktop)
             background-image: url("../assets/grafismo-fundo-baixo.svg")
             background-position: bottom center
             .col-lg-1
@@ -48,7 +52,7 @@ h1
                 max-width: 11.11111%
         .video-container
             display: none
-            @media (min-width: 1000px)
+            @media ($desktop)
                 display: block
                 max-height: 60vh
                 overflow: hidden
@@ -57,12 +61,12 @@ h1
                 z-index: 1
         .video
             display: none
-            @media (min-width: 1000px)
+            @media ($desktop)
                 display: block
                 width: 100%
 
     &.sobre, &.parceiros
-        @media (min-width: 1000px)
+        @media ($desktop)
             background-image: url("../assets/grafismo-fundo-em-cima.svg"), url("../assets/grafismo-fundo-baixo.svg")
             background-position: top center, bottom center
         .texto-sobre
@@ -71,7 +75,7 @@ h1
             text-align: justify
 
     &.sobre
-        @media (min-width: 1000px)
+        @media ($desktop)
             padding-bottom: 5%
         h1
             margin-top: 5%
@@ -81,7 +85,7 @@ h1
             margin-bottom: 10%
             color: $azul
             text-align: center
-            @media (min-width: 1000px)
+            @media ($desktop)
                 text-align: left
 
         .texto-descricao
@@ -103,7 +107,7 @@ h1
             .row
                 margin-bottom: 15px
         .geoprocessamento
-            @media (min-width: 1000px)
+            @media ($desktop)
                 font-size: .8em
 
 .produtos
@@ -115,12 +119,12 @@ h1
         text-transform: uppercase
         font-size: 1.2em
         padding: 0 10%
-        @media (min-width: 1000px)
+        @media ($desktop)
             font-size: 1.8em
             padding: 0
     p
         display: none
-        @media (min-width: 1000px)
+        @media ($desktop)
             display: block
 
     .touch-selector
@@ -129,7 +133,7 @@ h1
         height: 50%
         width: 100%
         z-index: 3
-        @media (min-width: 1000px)
+        @media ($desktop)
             display: none
 
     .destaque
@@ -179,7 +183,7 @@ h1
                 top: 18%
                 left: 42.5%
                 width: 15%
-                @media (min-width: 1000px)
+                @media ($desktop)
                     width: initial
             &.next
                 left: 75%
@@ -192,7 +196,7 @@ h1
             padding-top: 35%
             text-align: center
 
-        @media (max-width: 999px) and (orientation: landscape)
+        @media ($mobile) and ($landscape)
             background-position: center top
             height: 90vh
             margin-top: -5vh
@@ -212,7 +216,7 @@ h1
                 &.next
                     left: 70%
 
-        @media (min-width: 1000px)
+        @media ($desktop)
             background-image: url("../assets/roda-e-destaque.png")
             background-position: center left
             background-size: 50vh
@@ -287,8 +291,6 @@ h1
         .col-lg-1
             padding-left: 0
             padding-right: 0
-        
-            
 
 .produto-icone
     background-position: top center
@@ -309,7 +311,7 @@ h1
         height: 20px
         line-height: 1.25em
         vertical-align: top
-        @media (min-width: 1000px)
+        @media ($desktop)
             font-weight: bold
 
     &:hover
@@ -319,7 +321,11 @@ h1
         filter: grayscale(1)
 
     &.cadg
-        background-image: url('../assets/icons/icon_cadg.svg')
+        background-image: url('../assets/logo_mpEmMapas-vertical.png')
+        @media ($desktop)
+            margin-top: 3.5vh
+            span
+                display: none !important
     &.inloco
         background-image: url('../assets/icons/icon_inloco.svg')
     &.dpj
@@ -342,7 +348,6 @@ h1
         background-image: url('../assets/icons/icon_everaldo.svg')
     &.api
         background-image: url('../assets/icons/icon_api.svg')
-
 
 #parceiros
     h1    
@@ -396,15 +401,11 @@ footer
         margin-top: 15px
         width: 258px
         height: 60px
-        @media (min-width: 1000px)
+        @media ($desktop)
             float: right
             margin-top: 0
 
-@media (min-width: 1000px)
+@media ($desktop)
     .produtos .destaque .container-icone
         &.previous, &.next
             width: 10vh
-        // span
-        //     font-size: 1.3em
-        // .parquet-financeiro span, .painel-gerencial span
-        //     font-size: 1.2em
