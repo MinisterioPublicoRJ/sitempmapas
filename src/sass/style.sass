@@ -31,10 +31,43 @@ h1
     background: white
     box-shadow: 0 5px 10px rgba(0,0,0,.3)
 
+.navbar-collapse
+    @media (max-width: 1000px)
+        background: rgba(21,123,177,.85)
+        font-weight: lighter
+        height: 100vh
+        left: 0
+        padding-top: 25vh
+        position: fixed
+        top: 0
+        width: 100vw
+
 .nav-item
     font-size: .8em
     padding: 0 15px
 
+.white-logo
+    position: absolute
+    left: 50%
+    margin-left: -103px
+    top: 75vh
+
+.nav-link
+    @media (max-width: 1000px)
+        color: rgba(255,255,255,1) !important
+        font-size: 5vh
+        text-align: center
+
+.navbar-close
+    display: none
+    @media (max-width: 1000px)
+        background: none
+        border: 0
+        color: rgba(255,255,255,1)
+        display: block
+        font-size: 15vh
+        text-align: center
+        width: 100%
 .pagina
     min-height: 100vh
     padding-top: 56px
@@ -118,7 +151,7 @@ h1
         line-height: 1.4em
         text-transform: uppercase
         font-size: 1.2em
-        padding: 0 10%
+        padding: 0 5%
         @media ($desktop)
             font-size: 1.8em
             padding: 0
