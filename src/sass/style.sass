@@ -225,6 +225,41 @@ h1
             padding-top: 35%
             text-align: center
 
+            .descricao
+                display: block
+                @media (max-width: 1000px)
+                    background: rgba(21, 123, 177, .85)
+                    box-shadow: 0 0 0vh 10vh black
+                    display: none
+                    height: 80vh
+                    left: 5vw
+                    padding: 5vh 5vw
+                    position: fixed
+                    text-align: justify
+                    top: 10vh
+                    width: 90vw
+                    z-index: 3
+                span
+                    display: block
+
+                .current-button-fechar
+                    background: none
+                    border: 0
+                    color: red
+                    font-size: 1.5em
+                    position: absolute
+                    right: 0
+                    text-align: center
+                    top: 0
+                    @media (min-width: 1000px)
+                        display: none
+
+                .current-button-mobile
+                    display: table
+                    margin: 2vh auto
+                    @media (min-width: 1000px)
+                        display: none
+
         @media (max-width: 999px) and (orientation: landscape)
             background-position: center top
             height: 90vh
@@ -309,6 +344,11 @@ h1
                     margin-bottom: 20px
                 #current-button
                     font-size: .8em
+
+                .current-button-mobile
+                    display: block
+                    @media (min-width: 1000px)
+                        display: none
 
     .lista-produtos
         background: white
