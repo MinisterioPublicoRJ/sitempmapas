@@ -24,6 +24,7 @@ const PRODUTOS = [
         class: 'mpedia',
         url: 'http://apps.mprj.mp.br/sistema/parquetdata',
         restricted: false,
+        video: 'mpedia.mp4',
     },
     {
         name: 'GQP',
