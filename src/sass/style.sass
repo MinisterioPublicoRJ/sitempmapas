@@ -32,7 +32,7 @@ h1
     box-shadow: 0 5px 10px rgba(0,0,0,.3)
 
 .navbar-collapse
-    @media (max-width: 1000px)
+    @media ($mobile)
         background: rgba(21,123,177,.85)
         font-weight: lighter
         height: 100vh
@@ -52,15 +52,16 @@ h1
     margin-left: -103px
     top: 75vh
 
-.nav-link
-    @media (max-width: 1000px)
-        color: rgba(255,255,255,1) !important
-        font-size: 5vh
-        text-align: center
+nav
+    .nav-link
+        @media ($mobile)
+            color: rgba(255,255,255,1) !important
+            font-size: 5vh
+            text-align: center
 
 .navbar-close
     display: none
-    @media (max-width: 1000px)
+    @media ($mobile)
         background: none
         border: 0
         color: rgba(255,255,255,1)
@@ -229,6 +230,41 @@ h1
             padding-top: 35%
             text-align: center
 
+            .descricao
+                display: block
+                @media ($mobile)
+                    background: rgba(21, 123, 177, .85)
+                    box-shadow: 0 0 0vh 10vh black
+                    display: none
+                    height: 80vh
+                    left: 5vw
+                    padding: 5vh 5vw
+                    position: fixed
+                    text-align: justify
+                    top: 10vh
+                    width: 90vw
+                    z-index: 3
+                span
+                    display: block
+
+                .current-button-fechar
+                    background: none
+                    border: 0
+                    color: red
+                    font-size: 1.5em
+                    position: absolute
+                    right: 0
+                    text-align: center
+                    top: 0
+                    @media ($desktop)
+                        display: none
+
+                .current-button-mobile
+                    display: table
+                    margin: 2vh auto
+                    @media ($desktop)
+                        display: none
+
         @media ($mobile) and ($landscape)
             background-position: center top
             height: 90vh
@@ -313,6 +349,11 @@ h1
                     margin-bottom: 20px
                 #current-button
                     font-size: .8em
+
+                .current-button-mobile
+                    display: block
+                    @media ($desktop)
+                        display: none
 
     .lista-produtos
         background: white

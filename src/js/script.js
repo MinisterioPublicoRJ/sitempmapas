@@ -86,6 +86,8 @@ let $arrowUp = $('#arrow-up')
 let $currentTitle = $('#current-title')
 let $currentDescription = $('#current-description')
 let $currentButton = $('#current-button')
+let $currentButtonFechar = $('#current-button-fechar')
+let $currentButtonMobile = $('#current-button-mobile')
 
 let $seletorPreviousHidden = $('#selector-previous-hidden')
 let $seletorPrevious = $('#selector-previous')
@@ -165,7 +167,7 @@ const selectProduct = productId => {
         $seletorNext = $('#selector-next')
         $seletorNextHidden = $('#selector-next-hidden')
         $currentTitle = $('#current-title')
-        $currentDescription = $('#current-description')
+        $currentDescriptionText = $('#current-description span')
         $currentButton = $('#current-button')
 
         $seletorPreviousHidden.html(`<div class="produto-icone ${previousHiddenProduct.class}"></div>`)
@@ -175,7 +177,7 @@ const selectProduct = productId => {
         $seletorCurrent.html(`<div class="produto-icone ${currentProduct.class}"><span>${currentProduct.name}</span></div>`)
 
         $currentTitle.html(currentProduct.title)
-        $currentDescription.html(currentProduct.description)
+        $currentDescriptionText.html(currentProduct.description)
 
         if (currentProduct.video) {
             setVideo(currentProduct.video)
@@ -184,24 +186,30 @@ const selectProduct = productId => {
         }
 
         // button
-        if (!currentProduct.url) {
-            $currentButton.hide()
+        let url = currentProduct.url || ''
+        let buttonText = 'Acessar'
+        if (currentProduct.restricted) {
+            buttonText += ' 🔒'
+            $currentButton.removeClass('btn-outline-light').addClass('btn-outline-warning')
         } else {
-            let buttonText = 'Acessar'
-            if (currentProduct.restricted) {
-                buttonText += ' 🔒'
-                $currentButton.removeClass('btn-outline-light').addClass('btn-outline-warning')
-            } else {
-                $currentButton.removeClass('btn-outline-warning').addClass('btn-outline-light')
-            }
-            if (currentProduct.url[0] === '#') {
-                buttonText = 'Saiba Mais +'
-            }
-            $currentButton
-                .show()
-                .text(buttonText)
-                .attr('href', currentProduct.url)
+            $currentButton.removeClass('btn-outline-warning').addClass('btn-outline-light')
         }
+        if (url[0] === '#') {
+            buttonText = 'Saiba Mais +'
+        }
+        if (url === '') {
+            buttonText = 'EM BREVE'
+        }
+        $currentButton
+            .show()
+            .text(buttonText)
+            .attr('href', url)
+        if (window.matchMedia("(max-width: 1000px)").matches) {
+            $currentButton.text('Saiba Mais +')
+        }
+        $currentButtonMobile
+            .text(buttonText)
+            .attr('href', url)
 
         // re-enable events on previous/next icons
         $seletorPrevious.on('click', scrollUp)
@@ -267,4 +275,17 @@ $(document).ready(() => {
 
     // video
     setVideo('institucional-setor.mp4')
+
+    if (window.matchMedia("(max-width: 1000px)").matches) {
+        $currentButton.on("click", e => {
+            e.preventDefault()
+            $currentDescription.show()
+        })
+        $currentButtonFechar.on("click", () => {
+            $currentDescription.hide()
+        })
+        $currentButtonMobile.on("click", () => {
+            $currentDescription.hide()
+        })
+    }
 })
