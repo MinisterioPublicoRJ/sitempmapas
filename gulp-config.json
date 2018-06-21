@@ -3,9 +3,6 @@
     "srcDist":"dist",
     "srcWatch":"src/**/*",
 
-    "favIcoSrcPath":"src/favicon/*",
-    "favIcoSrcDist":"dist/favicon",
-
     "imgSrcPath":"src/img/**/*",
     "imgSrcDist":"dist/img",
 
