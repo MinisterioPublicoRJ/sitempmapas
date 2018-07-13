@@ -33,7 +33,6 @@ const PRODUTOS = [
         class: 'gqp',
         url: 'http://apps.mprj.mp.br/sistema/gqp/',
         restricted: true,
-        video: 'gqp.mp4',
     },
     {
         name: 'Painéis Gerenciais',
