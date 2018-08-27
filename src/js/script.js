@@ -65,10 +65,10 @@ const PRODUTOS = [
         restricted: true,
     },
     {
-        name: 'Sinapse',
-        title: 'Sinapse',
-        description: 'Como um agregador de bases de dados e gerador de análise de vínculos, o Sinapse é a ferramenta do MPRJ que se conecta a diversas bases de dados realizando conexões outrora não possíveis entre informações distintas.',
-        class: 'sinapse',
+        name: 'Conexão',
+        title: 'Conexão',
+        description: 'Como um agregador de bases de dados e gerador de análise de vínculos, o Conexão é a ferramenta do MPRJ que se conecta a diversas bases de dados realizando conexões outrora não possíveis entre informações distintas.',
+        class: 'conexao',
     },
     {
         name: 'Parquet Financeiro',
@@ -204,6 +204,7 @@ const selectProduct = productId => {
             .show()
             .text(buttonText)
             .attr('href', url)
+
         if (window.matchMedia("(max-width: 1000px)").matches) {
             $currentButton.text('Saiba Mais +')
         }
