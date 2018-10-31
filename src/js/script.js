@@ -188,6 +188,12 @@ const selectProduct = productId => {
         // button
         let url = currentProduct.url || ''
         let buttonText = 'Acessar'
+        if (url === '') {
+            // buttonText = 'EM BREVE'
+            $currentButton.removeClass('btn-outline-light').addClass('d-none')
+        } else {
+            $currentButton.removeClass('d-none').addClass('btn-outline-light')
+        }
         if (currentProduct.restricted) {
             buttonText += ' 🔒'
             $currentButton.removeClass('btn-outline-light').addClass('btn-outline-warning')
@@ -196,9 +202,6 @@ const selectProduct = productId => {
         }
         if (url[0] === '#') {
             buttonText = 'Saiba Mais +'
-        }
-        if (url === '') {
-            buttonText = 'EM BREVE'
         }
         $currentButton
             .show()
