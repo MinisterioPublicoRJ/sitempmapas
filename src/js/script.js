@@ -193,6 +193,10 @@ const selectProduct = productId => {
         if (url === '') {
             // buttonText = 'EM BREVE'
             $currentButton.removeClass('btn-outline-light').addClass('d-none')
+            if (window.matchMedia("(max-width: 1000px)").matches) {
+                $currentButton.removeClass('d-none').addClass('btn-outline-light')
+            }
+            $currentButtonMobile.removeClass('btn-outline-light').addClass('d-none')
         } else {
             $currentButton.removeClass('d-none').addClass('btn-outline-light')
         }
