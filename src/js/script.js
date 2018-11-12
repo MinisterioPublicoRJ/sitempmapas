@@ -69,6 +69,8 @@ const PRODUTOS = [
         title: 'Conexão',
         description: 'Como um agregador de bases de dados e gerador de análise de vínculos, o Conexão é a ferramenta do MPRJ que se conecta a diversas bases de dados realizando conexões outrora não possíveis entre informações distintas.',
         class: 'conexao',
+        url: 'https://conexao.mprj.mp.br/',
+        restricted: true,
     },
     {
         name: 'Parquet Financeiro',
