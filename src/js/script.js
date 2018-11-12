@@ -277,6 +277,7 @@ $(document).ready(() => {
     // enable icons row click
     $('.lista-produtos .produto-icone').on('click', function(){
         selectProduct($(this).data('product-id'))
+        $currentDescription.show()
     })
 
     // video
