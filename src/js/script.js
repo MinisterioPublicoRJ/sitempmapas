@@ -46,7 +46,7 @@ const PRODUTOS = [
     {
         name: 'Lyra',
         title: 'Lyra',
-        description: 'Família de projetos de inteligência artificial do MPRJ, batizada em homenagem a Roberto Lyra, considerado o "Príncipe dos Promotores de Justiça do Brasil". O projeto Lyra está treinando um robô para ler e interpretar documentos judiciais, tornando possíveis análises estatísticas e predileções sobre andamento de processos.',
+        description: 'Família de projetos de inteligência artificial do MPRJ, batizada em homenagem a Roberto Lyra, considerado o "Príncipe dos Promotores de Justiça do Brasil". O projeto Lyra está treinando um robô para ler e interpretar documentos judiciais, tornando possíveis análises estatísticas e predições sobre andamento de processos.',
         class: 'lyra',
         video: 'lyra.mp4',
     },
