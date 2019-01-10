@@ -77,6 +77,8 @@ const PRODUTOS = [
         title: 'Parquet Financeiro',
         description: 'Painel de visualização de dados de execução financeira do MPRJ e de seus órgãos. Nele podem ser encontradas em detalhes informações sobre diferentes linhas de custo permitindo aos gestores do <em>parquet</em> uma visão macro do fluxo orçamentário do órgão, auxiliando na implementação de uma gestão financeira pública saudável.',
         class: 'parquet-financeiro',
+        url: 'http://apps.mprj.mp.br/sistema/parquet-financeiro/',
+        restricted: true,
     },
 ]
 let previousProductId

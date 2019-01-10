@@ -1,13 +1,13 @@
 {
     "srcPath":"src",
-    "srcDist":"dist",
+    "srcDist":"cadg",
     "srcWatch":"src/**/*",
 
     "imgSrcPath":"src/img/**/*",
-    "imgSrcDist":"dist/img",
+    "imgSrcDist":"cadg/img",
 
     "fontSrcPath":"src/fonts/**/*",
-    "fontSrcDist":"dist/fonts",
+    "fontSrcDist":"cadg/fonts",
 
     "cssSrcPath":"src/css/*.css",
 
@@ -15,7 +15,7 @@
     "sassDist":"src/css/",
 
     "htmlSrcPath":"src/*.html",
-    "htmlSrcDist":"dist/*.html",
+    "htmlSrcDist":"cadg/*.html",
 
     "tasksPath":"./tasks"
 }
