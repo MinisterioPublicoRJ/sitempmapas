@@ -9,6 +9,10 @@
 
     npm run server
 
+## Building
+
+    npm run build
+
 ## Troubleshooting
 
 If you get the following error:
