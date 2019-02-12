@@ -3,7 +3,7 @@ const PRODUTOS = [
     {
         name: 'MP em Mapas',
         title: 'Inovação em Estatística,<br> Geografia e Data Science',
-        description: 'O MP em Mapas é uma família de plataformas de análise, diagnóstico e georreferenciamento focadas na construção e visualização de conhecimento instrumental para a atividade-fim do Ministério Público do Estado do Rio de Janeiro.',
+        description: 'Com dados abertos, o ‘MP em Mapas’ pode ser consultado pelos cidadãos. E permite aos membros do Ministério Público o entendimento das demandas do estado e dos municípios fluminenses, para a adoção de medidas mais eficazes e resolutivas.',
         class: 'cadg',
         url: '#sobre',
         video: 'institucional-setor.mp4',
@@ -11,7 +11,7 @@ const PRODUTOS = [
     {
         name: 'In Loco',
         title: 'In Loco',
-        description: 'O In Loco é uma plataforma de mapas interativos criada pelo Ministério Público do Estado do Rio de Janeiro, permitindo ao usuário visualizar e sobrepor dados geográficos de diversos assuntos, realizar buscas e dispor de diversas informações.',
+        description: 'O InLoco é uma plataforma de mapas interativos criada pelo Ministério Público do Estado do Rio de Janeiro, permitindo ao usuário visualizar e sobrepor dados geográficos de diversos assuntos, realizar buscas e dispor de diversas informações.',
         class: 'inloco',
         url: 'http://apps.mprj.mp.br/sistema/inloco/',
         restricted: false,
@@ -19,8 +19,8 @@ const PRODUTOS = [
     },
     {
         name: '',
-        title: 'MPRJ+',
-        description: 'Ferramenta que desenvolve visualizações de dados e indicadores, disseminando conhecimento e estimulando a interação entre múltiplos grupos de usuários da sociedade, colaborando no desempenho e otimização do trabalho do Promotor de Justiça. A MPRJ+ tem como objetivo simplificar o acesso ao conhecimento gerado a partir de informações de dados oficiais georreferenciados, através da criação de visualizações gráficas intuitivas, permitindo a realização de análises dos principais dados do estado em diversas áreas, tais como segurança, saúde, educação e meio ambiente.',
+        title: 'MPRJ Digital',
+        description: 'Ferramenta que desenvolve visualizações de dados e indicadores, disseminando conhecimento e estimulando a interação entre múltiplos grupos de usuários da sociedade, colaborando no desempenho e otimização do trabalho do Promotor de Justiça.',
         class: 'mpedia',
         url: 'http://apps.mprj.mp.br/sistema/mpmais/',
         restricted: false,
@@ -29,7 +29,7 @@ const PRODUTOS = [
     {
         name: '',
         title: 'Domínio MPRJ',
-        description: 'O Domínio MPRJ é um sistema de acesso restrito aos membros e secretários do MPRJ focado no controle do acervo dos órgãos. Com visualizações de dados agrupados em dashboards e alertas para documentos em situações atípicas, esta ferramenta auxilia as promotorias a manterem seu fluxo de trabalho organizado e seu acervo de documentos sob controle.',
+        description: 'O Domínio MPRJ é um sistema de acesso restrito aos membros e secretários do MPRJ, focado no controle do acervo dos órgãos. Com visualizações de dados agrupados em dashboards e alertas para documentos em situações atípicas, esta ferramenta auxilia as promotorias a manterem seu fluxo de trabalho organizado e seu acervo de documentos sob controle.',
         class: 'gqp',
         url: 'http://apps.mprj.mp.br/sistema/dominio/',
         restricted: true,
@@ -37,7 +37,7 @@ const PRODUTOS = [
     {
         name: 'Painéis Gerenciais',
         title: 'Painéis Gerenciais',
-        description: 'Os painéis gerenciais do "MP em Mapas 2.0" apresentam diversos dados agrupados sobre regiões do estado do Rio de Janeiro. Em sua visão Social são encontradas informações sobre políticos eleitos, atividades econômicas, cultura local e informações de execução orçamentárias. Já nos painéis "Institucional" e "Administrativo", de acesso excluisivo para os membros do MPRJ, são apresentadas informações sobre os do MPRJ, com detalhamentos da distribuição de sua força de trabalho e de seus gastos.',
+        description: 'Os painéis gerenciais do ‘MP em Mapas 2.0’ apresentam diversos dados agrupados sobre regiões do estado do Rio de Janeiro. Em sua visão social são encontradas informações sobre políticos eleitos, atividades econômicas, cultura local e informações de execuções orçamentárias.',
         class: 'painel-gerencial',
         url: 'http://apps.mprj.mp.br/sistema/mpmapas/',
         restricted: false,
@@ -46,20 +46,20 @@ const PRODUTOS = [
     {
         name: 'Lyra',
         title: 'Lyra',
-        description: 'Família de projetos de inteligência artificial do MPRJ, batizada em homenagem a Roberto Lyra, considerado o "Príncipe dos Promotores de Justiça do Brasil". O projeto Lyra está treinando um robô para ler e interpretar documentos judiciais, tornando possíveis análises estatísticas e predições sobre andamento de processos.',
+        description: 'Família de projetos de inteligência artificial do MPRJ, batizada em homenagem a Roberto Lyra, considerado o ‘Príncipe dos Promotores de Justiça do Brasil’. O projeto Lyra está treinando um robô para ler e interpretar documentos judiciais, tornando possíveis análises estatísticas e predições sobre andamento de processos.',
         class: 'lyra',
         video: 'lyra.mp4',
     },
     {
         name: 'Zuleika',
         title: 'Zuleika',
-        description: 'Nomeada em homenagem à primeira promotora do Brasil, Zuleika Sucupira Kenworthy, esta ferramenta garante que o MPRJ tenha acesso a todos os andamentos de seus processos no TJ, trabalhando diariamente na importação de dados de um órgão para o outro.',
+        description: 'Nomeada em homenagem à primeira promotora do Brasil, Zuleika Sucupira Kenworthy, esta ferramenta garante que o MPRJ tenha acesso a todos os andamentos de seus processos no TJRJ, trabalhando diariamente na importação de dados de um órgão para o outro.',
         class: 'zuleika',
     },
     {
         name: 'Diagnóstico das Promotorias',
         title: 'Diagnóstico das Promotorias',
-        description: 'Ferramenta interativa que permite aos membros visualizarem a evolução de dados de seus órgãos ao longo do tempo, inclusive permitindo comparação entre diferentes órgãos, permitindo ao membro uma compreensão baseada em dados da produtividade de seu trabalho.',
+        description: 'Ferramenta interativa que permite aos membros visualizarem a evolução de dados de seus órgãos ao longo do tempo, inclusive permitindo comparação entre diferentes órgãos, permitindo ao membro uma compreensão baseada em dados da produtividade de seu trabalho.',
         class: 'dpj',
         url: 'http://apps.mprj.mp.br/sistema/dgpj/',
         restricted: true,
@@ -67,7 +67,7 @@ const PRODUTOS = [
     {
         name: 'Conexão',
         title: 'Conexão',
-        description: 'Como um agregador de bases de dados e gerador de análise de vínculos, o Conexão é a ferramenta do MPRJ que se conecta a diversas bases de dados realizando conexões outrora não possíveis entre informações distintas.',
+        description: 'Como um agregador de bases de dados e gerador de análise de vínculos, o Conexão é a ferramenta do MPRJ que se conecta a diversas bases de dados realizando cruzamentos outrora não possíveis entre informações distintas.',
         class: 'conexao',
         url: 'https://conexao.mprj.mp.br/',
         restricted: true,
@@ -75,7 +75,7 @@ const PRODUTOS = [
     {
         name: 'Parquet Financeiro',
         title: 'Parquet Financeiro',
-        description: 'Painel de visualização de dados de execução financeira do MPRJ e de seus órgãos. Nele podem ser encontradas em detalhes informações sobre diferentes linhas de custo permitindo aos gestores do <em>parquet</em> uma visão macro do fluxo orçamentário do órgão, auxiliando na implementação de uma gestão financeira pública saudável.',
+        description: 'Painel de visualização de dados de execução financeira do MPRJ e de seus órgãos. Nele podem ser encontradas em detalhes informações sobre diferentes linhas de custo, permitindo aos gestores do <em>parquet</em> uma visão macro do fluxo orçamentário do órgão, auxiliando na implementação de uma gestão pública saudável.',
         class: 'parquet-financeiro',
         url: 'http://apps.mprj.mp.br/sistema/parquet-financeiro/',
         restricted: true,
