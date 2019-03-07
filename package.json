@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "gulp": "gulp",
     "server": "npm run gulp server",
-    "build": "npm run gulp build"
+    "prebuild": "rm -rf cadg cadg.zip 2> /dev/null",
+    "build": "npm run gulp build",
+    "postbuild": "zip -r cadg.zip cadg"
   },
   "author": "mpemmapas-mprj",
   "license": "ISC",
@@ -29,5 +31,8 @@
     "jquery": "^3.3.1",
     "popper.js": "^1.14.3",
     "save-dev": "^2.0.0"
+  },
+  "devDependencies": {
+    "gulp-rev": "^9.0.0"
   }
 }
