@@ -1,5 +1,9 @@
 # Site MP em Mapas
 
+# Requirements
+
+* Node > v8 and < V10
+
 ## Installing
 
     npm i gulp -g
