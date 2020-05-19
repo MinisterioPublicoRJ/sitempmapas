@@ -29,8 +29,7 @@
     "gulp-uglify": "^3.0.0",
     "gulp-usemin": "^0.3.25",
     "jquery": "^3.3.1",
-    "popper.js": "^1.14.3",
-    "save-dev": "^2.0.0"
+    "popper.js": "^1.14.3"
   },
   "devDependencies": {
     "gulp-rev": "^9.0.0"
